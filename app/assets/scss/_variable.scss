@@ -1,0 +1,15 @@
+ 
+$yellow-primary: #FDAD00;
+$yellow-secondary: #EAD103;
+$footer-bg: #0D0D0D; 
+$blue-bg: #DDE6E8;
+$dark22: #222222;
+$dark21: #212121;
+
+$hover-light-btn: lighten($color: $dark21, $amount: 80);
+$hover-btn: lighten($color: $dark21, $amount: 70);
+$hover-dark-btn: lighten($color: $dark21, $amount: 10);
+
+$kyivstar: #12D4C9;
+
+$hover: 250ms cubic-bezier(0.4, 0, 0.2, 1);

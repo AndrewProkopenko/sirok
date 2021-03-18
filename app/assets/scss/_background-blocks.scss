@@ -1,0 +1,92 @@
+
+.top-blue-bg-block, .bottom-blue-bg-block{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 42vw;
+    background-image: url(../img/backgrounds/blue-top.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.bottom-blue-bg-block {  
+    top: auto;
+    bottom: -300px;
+    transform: rotate(180deg);
+}
+.yellow-bg-block {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%; 
+    height: calc(100% - 74px);
+    min-height: 27vw; 
+    background-image: url(../img/backgrounds/yellow-line.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} 
+ 
+@media screen and (max-width: 770px) {
+    .top-blue-bg-block, .bottom-blue-bg-block {
+        height: 60vw;
+    }
+}
+@media screen and (max-width: 576px) {
+    .top-blue-bg-block, .bottom-blue-bg-block {
+        height: 50vw;
+        background-image: url(../img/backgrounds/blue-top-576.svg);
+        min-height: auto;
+    }
+    .bottom-blue-bg-block {
+        bottom: calc(-50vw + 80px); 
+    }
+    .yellow-bg-block {
+        background-image: url(../img/backgrounds/yellow-line-576.svg);
+    }
+    .recipe .yellow-bg-block {
+        height: calc(100% - 110px );
+        background-image: url(../img/backgrounds/yellow-line-576.svg);
+        background-repeat: space;
+        background-size: auto;
+        &::after {
+            content: '';
+            position: absolute; 
+            top: 60px;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+              
+            background-color: $yellow-primary;
+
+        }
+    }
+     
+}
+@media screen and (max-width: 450px) { 
+    .bottom-blue-bg-block {
+        bottom: calc(-50vw + 10px); 
+    }
+}
+ 
+
+@media screen and (min-width: 1400px)  { 
+    .yellow-bg-block {
+        background-image: url(../img/backgrounds/yellow-line-2880.svg);
+        min-height: auto;
+        max-height: 100%;
+    }
+    .top-blue-bg-block, .bottom-blue-bg-block {
+        max-height: 600px;
+        background-image: url(../img/backgrounds/blue-top-2880.svg);
+    }
+    .recipes .yellow-bg-block { 
+        background-image: url(../img/backgrounds/yellow-200-line-2880.svg);
+    } 
+
+}

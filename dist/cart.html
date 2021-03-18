@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар - Sirok</title> 
+     
+    <link rel="preload"  href="assets/css/style.css" as="style" >
+    
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.ico">  
+</head>
+<body>
+      
+      
+    <!-- header start -->
+    <header>
+        <div class="header header-colored"> 
+            <div class="menu-wrapper js-menu-wrapper"></div> 
+            <div class="search-wrap js-search-wrapper"></div> 
+
+            <div class="search-form js-search-form"> 
+                    <form>
+                        <div class="input-button">
+                            <label>Поиск</label>
+                            <input type="text" placeholder="Поиск" >
+                            <button type="submit">
+                                <i class="icon icon-search"></i>
+                            </button>
+                        </div>
+                    </form>  
+            </div>
+
+            <div class="container">
+                <div class="header-phones">
+                    <div class="header-phones_item">
+                        <a href="tel:+380 50 919 98 55">
+                            <div class="icon">
+                                <svg><use xlink:href='assets/sprite.svg#phone'></use></svg>
+                            </div>
+                            <span>
+                                +380 50 919 98 55
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header-phones_item">
+                        <a href="tel:++380 97 495 23 58">
+                            <div class="icon">
+                                <svg><use xlink:href='assets/sprite.svg#phone'></use></svg>
+                            </div>
+                            <span>
+                                +380 97 495 23 58
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header-line">
+                    <div class="logo">
+                        LOGO
+                    </div>
+                    <div class="mobile-header">
+                        <div class="mobile-search js-search-btn ">    
+                            <i class="icon icon-search"></i> 
+                        </div>
+                        <div class="mobile-menu-btn js-header-menu-btn"> 
+                            <i class="icon icon-menu"></i>
+                        </div>
+                    </div>
+                   
+                    <div class="header-row mobile-menu js-header-menu"> 
+                       
+                        <div class="header-row_menu ">
+                            <div class="header-row_menu__drop-down js-category-menu">
+                                <div class="header-row_menu__drop-down_mobile-close js-mobile-close-menu"><span></span></div>
+
+                                <div class="header-row_menu__drop-down_btn js-category-btn">
+                                    Категории
+                                </div>
+                                <div class="header-row_menu__drop-down_menu">
+                                    <div class="drop-menu">
+                                        <div class="drop-menu_categories">
+                                            <ul>
+                                                <li class="title">Категории</li>
+                                                <li class="js-menu-hover-item" >
+                                                    <a data-menu-id='1' href="#">Оборудование</a> <i data-menu-id='1' class=" icon icon-arrow"></i>
+                                                </li>
+                                                <li class="js-menu-hover-item" >
+                                                    <a data-menu-id='2' href="#">Компоненты</a> <i data-menu-id='2' class="icon icon-arrow"></i>
+                                                </li>
+                                                <li class="js-menu-hover-item" >
+                                                    <a data-menu-id='3' href="#">Мягкие сыры</a> <i data-menu-id='3' class=" icon icon-arrow"></i>
+                                                </li>
+                                                <li class="js-menu-hover-item" >
+                                                    <a data-menu-id='4' href="#">Твердые сыры</a> <i data-menu-id='4' class="icon icon-arrow"></i>
+                                                </li>
+                                                <li class="js-menu-hover-item" >
+                                                    <a data-menu-id='5' href="#">Рецепты сыров</a> <i data-menu-id='5' class="icon icon-arrow"></i>
+                                                </li>
+                                                <li class="js-menu-hover-item" >
+                                                    <a data-menu-id='6' href="#">Сыры с плесенью</a> <i data-menu-id='6' class=" icon icon-arrow"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="drop-menu_select-container"> 
+                                            <div class="drop-menu_list js-menu-list show main-list" data-menu-id='main'>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            <i class="js-icon-back icon icon-arrow">Назад</i> 
+                                                            Оборудование
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Сыроварни</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Лиры</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Автоматика</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Пресс для сыра</a>
+                                                        </li>
+                                                        <li class="large">
+                                                            <a href="#">Сыры 
+                                                                с плесенью</a>
+                                                        </li> 
+                                                    </ul>
+                                                </div>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            Компоненты
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Защитная культура</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Липаза грибная</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Сметана</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Творог</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Ткани для сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Фермент для сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Закваски для сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Йогурт</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Стартеры плесени</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Пропионовые бактерии</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Хлорид кальция</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Соль для 
+                                                                плавления сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Бумага для сырa</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Покрытие для сыров</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Натуральные красители</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Кефир</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Формы для сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Оборудование</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Автоматика для 
+                                                                климатических камер</a>
+                                                        </li>  
+                                                    </ul>
+                                                </div>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            Мягкие сыры
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Буррата</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Осетинский</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Адыгейский</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Брынза</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Моцарелла</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Сулугуни</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Фета</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Филадельфия</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Халлуми</a>
+                                                        </li> 
+                                                    </ul>
+                                                </div>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            Твердые сыры
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Белпер Кнолле</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Грюйер</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Канестрато</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Монтазио</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Пошехонский</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Чеширский</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Эдамер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Эмменталь</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Голландский</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Российский</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Качотта</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Чаддер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Бутеркайзе</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Кесо Котиха</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Лайден</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Романо</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Хварти</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Пиора</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Альпийский</a>
+                                                        </li> 
+                                                    </ul>
+                                                </div>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            Рецепты сыров
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Булет д’Авен</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Кротен де Шавиньоль</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Морбье</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Мюнстер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Реблошон</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Сент мор де турен</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Шаурс</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Камамбер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Бри</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Дорблю</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Рокфор</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Горгонзола</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Стилтон</a>
+                                                        </li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="drop-menu_list js-menu-list" data-menu-id='1'>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            <i class="js-icon-back icon icon-arrow">Назад</i>  Оборудование
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Сыроварни</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Лиры</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Автоматика</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Пресс для сыра</a>
+                                                        </li>
+                                                        <li class="large">
+                                                            <a href="#">Сыры 
+                                                                с плесенью</a>
+                                                        </li> 
+                                                    </ul>
+                                                </div> 
+                                            </div> 
+                                            <div class="drop-menu_list js-menu-list" data-menu-id='2'>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            <i class="js-icon-back icon icon-arrow">Назад</i> 
+                                                            Компоненты
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Защитная культура</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Липаза грибная</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Сметана</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Творог</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Ткани для сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Фермент для сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Закваски для сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Йогурт</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Стартеры плесени</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Пропионовые бактерии</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Хлорид кальция</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Соль для 
+                                                                плавления сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Бумага для сырa</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Покрытие для сыров</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Натуральные красители</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Кефир</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Формы для сыра</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Оборудование</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Автоматика для 
+                                                                климатических камер</a>
+                                                        </li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="drop-menu_list js-menu-list" data-menu-id='3'>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            <i class="js-icon-back icon icon-arrow">Назад</i> 
+                                                            Мягкие сыры
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Буррата</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Осетинский</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Адыгейский</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Брынза</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Моцарелла</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Сулугуни</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Фета</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Филадельфия</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Халлуми</a>
+                                                        </li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="drop-menu_list js-menu-list" data-menu-id='4'> 
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            <i class="js-icon-back icon icon-arrow">Назад</i> 
+                                                            Твердые сыры
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Белпер Кнолле</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Грюйер</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Канестрато</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Монтазио</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Пошехонский</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Чеширский</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Эдамер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Эмменталь</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Голландский</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Российский</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Качотта</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Чаддер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Бутеркайзе</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Кесо Котиха</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Лайден</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Романо</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Хварти</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Пиора</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Альпийский</a>
+                                                        </li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="drop-menu_list js-menu-list" data-menu-id='5'>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            <i class="js-icon-back icon icon-arrow">Назад</i> 
+                                                            Рецепты сыров
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Булет д’Авен</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Кротен де Шавиньоль</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Морбье</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Мюнстер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Реблошон</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Сент мор де турен</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Шаурс</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Камамбер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Бри</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Дорблю</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Рокфор</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Горгонзола</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Стилтон</a>
+                                                        </li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="drop-menu_list js-menu-list" data-menu-id='6'>
+                                                <div class="drop-menu_list-item">
+                                                    <ul>
+                                                        <li class="title">
+                                                            <i class="js-icon-back icon icon-arrow">Назад</i> 
+                                                            Рецепты сыров
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Булет д’Авен</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Кротен де Шавиньоль</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Морбье</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Мюнстер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Реблошон</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Сент мор де турен</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Шаурс</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Камамбер</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Бри</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Дорблю</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Рокфор</a>
+                                                        </li> 
+                                                        <li>
+                                                            <a href="#">Горгонзола</a>
+                                                        </li>  
+                                                        <li>
+                                                            <a href="#">Стилтон</a>
+                                                        </li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-row_menu__drop-down_wrapper js-category-wrapper"></div>
+                            </div> 
+                            <ul class="small-menu">
+                                <li>
+                                    <a href="#">
+                                        Поддержка
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Информация
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-row_search">
+                            <div class="mobile-search js-search-btn ">    
+                                <i class="icon icon-search"></i> 
+                            </div>
+                                <form>
+                                    <div class="input-button">
+                                        <input type="text" placeholder="Поиск" >
+                                        <button type="submit">
+                                            <i class="icon icon-search"></i>
+                                        </button>
+                                    </div>
+                                </form> 
+                            
+                        </div>
+                        <div class="header-row_cart">
+                            <a href="/cart.html">
+                                <span>Корзина</span>
+                                <i class="icon">
+                                    <svg><use xlink:href='assets/sprite.svg#cart'></use></svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="header-row_lang">
+                            <div class="select-lang-restyle">
+                                <select class="select-init" value="ru" >
+                                    <option value="ru">RU</option>
+                                    <option value="ua">UA</option>
+                                    <option value="eng">ENG</option>
+                                    <option value="fr">France</option>
+                                </select>
+                            </div>
+                            <!-- <div class="active">RU</div>
+                            <ul> 
+                                <li><a href="#">UA</a></li>
+                                <li><a href="#">ENG</a></li> 
+                            </ul> -->
+                        </div>
+                        <div class="header-row_phones">
+                            <div class="header-phones_item">
+                                <a href="tel:+380 50 919 98 55">
+                                    <div class="icon">
+                                        <svg><use xlink:href='assets/sprite.svg#phone'></use></svg>
+                                    </div>
+                                    <span>
+                                        +380 50 919 98 55
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="header-phones_item">
+                                <a href="tel:++380 97 495 23 58">
+                                    <div class="icon">
+                                        <svg><use xlink:href='assets/sprite.svg#phone'></use></svg>
+                                    </div>
+                                    <span>
+                                        +380 97 495 23 58
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <main>
+        <div class="cart heading heading-500">
+            <div class="blue-bg-block">
+                <div class="top-blue-bg-block"></div>
+            </div> 
+            <div class="container">
+                <div class="cart-headings">
+                    <h4 class="heading-dark">Корзина</h4>
+                    <h3>У вас в корзине <span>2</span> товара</h3>
+                </div>
+                <div class="cart-container">
+                    <div class="cart-container_item">
+                        <a href="#">
+                            <div class="item">
+                                <div class="image" style="background-image: url(assets/img/blocks/block.jpg);"></div>
+                                <div class="content">
+                                    <h5>Автоматическая сыроварня - пастеризатор 12 литров </h5>
+                                    <div class="select">
+                                        <label for="select-quantity">Кол-во: </label>
+                                        <div class="select-restyle select-number">
+                                            <select name="sort" value="1" class="select-init">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <span>Цена:</span>
+                                        <p>14 000 гривен</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cart-container_item">
+                        <a href="#">
+                            <div class="item">
+                                <div class="image" style="background-image: url(assets/img/blocks/block.jpg);"></div>
+                                <div class="content">
+                                    <h5>Автоматическая сыроварня - пастеризатор 12 литров </h5>
+                                    <div class="select">
+                                        <label for="select-quantity">Кол-во: </label>
+                                        <div class="select-restyle select-number">
+                                            <select name="sort" value="1" class="select-init">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <span>Цена:</span>
+                                        <p>14 000 гривен</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container">
+                <div class="cart-footer">
+                    <div class="cart-footer_sum">
+                        <span>Всего:</span>
+                        <div class="heading-dark">
+                            14 017 гривен
+                        </div>
+                    </div>
+                    <div class="cart-footer_payment">
+                        <a href="#">
+                            <div class="heading-dark">
+                                <i class="icon">
+                                    <svg><use xlink:href="assets/sprite.svg#cart"></use></svg>
+                                </i>
+                                <span>Оплатить</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+    </main>
+
+    <!-- footer start -->
+    <footer> 
+        <!-- <div class="curved"></div>-->
+        <!-- <div class="curved2"></div>  -->
+        <div class="footer">
+            <div class="container">
+                <!-- <div class="footer-row"> -->
+                    <div class="row footer-row">
+                        <div class="col-12 col-md-auto">
+                            <div class="footer-row-item">
+                                <h5>Поддержка клиентов</h5>
+                                <ul class="footer-row-item_list">
+                                    <li>
+                                        <a href="#">Личный кабинет  </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">История заказов</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Возврат товара </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">подарочные сертификаты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Партнеры</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-auto">
+                            <div class="footer-row-item">
+                                <h5>Информация</h5>
+                                <ul class="footer-row-item_list">
+                                    <li>
+                                        <a href="#">О нас</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Информация о доставке</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Оформление заказа</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Политика безопасности</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Условия соглашения</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-auto">
+                            <div class="footer-row-item right">
+                                <h5>Подписаться на новости</h5>
+                                <ul class="footer-row-item_list ">
+                                    <li>
+                                        Узнайте первым о бонусах и акциях, подписавшись на нашу еженедельную почтовую рассылку.
+                                    </li> 
+                                </ul>
+                                <div class="footer-row-item_input">
+                                    <form>
+                                        <div class="input-button">
+                                            <input type="email" placeholder="Email adress..." >
+                                            <button type="submit">
+                                                <i class="icon icon-mail"></i>
+                                            </button>
+                                        </div>
+                                    </form> 
+                                </div>
+                            </div> 
+                        </div>
+                    </div> 
+                <!-- </div> -->
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+ 
+    <script src="assets/js/vendor.min.js"></script>    
+
+    <script src="assets/js/header.js"></script> 
+     
+    <script src="assets/js/selects-init.js"></script> 
+ 
+
+</body>
+</html>
