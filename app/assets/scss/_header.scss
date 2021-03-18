@@ -563,23 +563,23 @@
         &-row {
             &_menu__drop-down_btn {
                 position: relative;
-                // &.open {
-                //     &:after {
-                //         content: "Назад";
-                //         display: flex;
-                //         align-items: center;
-                //         justify-content: center;
-                //         position: absolute;
-                //         z-index: 2;
-                //         top: -2px;
-                //         left: -2px;
-                //         right: -2px;
-                //         bottom: -2px;
-                //         background: $yellow-secondary; 
-                //         color: $dark21;
-                //         border-radius: 25px;
-                //     }
-                // }
+                &.open {
+                    &:after {
+                        content: "Назад";
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        z-index: 2;
+                        top: -2px;
+                        left: -2px;
+                        right: -2px;
+                        bottom: -2px;
+                        background: $yellow-secondary; 
+                        color: $dark21;
+                        border-radius: 25px;
+                    }
+                }
             }
         }
         .mobile-header {
@@ -648,12 +648,12 @@
             transform: translateX(100%);
             transition: $hover;
             
-            overflow-y: scroll;
+            // overflow-y: scroll;
 
             
             .header-row { 
                 &_menu  {
-                    position: relative;
+                    // position: relative;
                     width: 100%;
                     flex-direction: column;
                     align-self: center;
@@ -665,10 +665,16 @@
                         margin-bottom: 20px;
                         width: 100%; 
                         &_menu {
-                            width: 380px;
-                            top: 55px;
-                            left: -30px; 
+                            // width: 380px;
+                            // top: 55px;
+                            // left: -30px; 
+                            width: 100%;
+                            top: 90px;
+                            bottom: 0;
+                            left: 0;
                             right: 0;
+                            overflow-x: hidden;
+
                             border-radius: 0;
                             background: $dark21;
                             color: #fff;

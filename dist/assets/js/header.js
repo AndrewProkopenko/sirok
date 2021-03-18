@@ -59,7 +59,9 @@ const menuWrapper = document.querySelector('.js-category-wrapper')
 
     menuBtn.addEventListener('click', () => {
         menuContainer.classList.add('show')
-         
+        if(winWidth < 992) {
+            menuBtn.classList.add('open')
+        }
     })
     menuWrapper.addEventListener('click', () => {
         if(winWidth < 992) {
@@ -103,8 +105,8 @@ const menuWrapper = document.querySelector('.js-category-wrapper')
         })
     }
 
-    function closeInnerMenu() {
-        
+    function closeInnerMenu() { 
+        menuBtn.classList.remove('open') 
         menuContainer.classList.remove('show') 
         menuList.forEach(list => {
             list.classList.remove('show')

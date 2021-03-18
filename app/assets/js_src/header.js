@@ -27,6 +27,7 @@ const menuWrapper = document.querySelector('.js-category-wrapper')
     headerBtn.addEventListener('click', function() {
         headerMenu.classList.add('mobile-menu-open') 
         headerWrapper.classList.add('show') 
+       
 
     });
     mobileClose.addEventListener('click', function() {
