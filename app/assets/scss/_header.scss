@@ -914,6 +914,13 @@
                     padding-top: 10px;
                     padding-bottom: 20px;
                     width: 100%;
+                    &:active {
+                        span {
+                            &::after, &::before {
+                                background: $yellow-primary 
+                            }
+                        }
+                    }
                     span {
                         display: block;
                         position: relative;
@@ -953,6 +960,20 @@
                 }
                 &_menu {
                     width: 100vw;
+                    .drop-menu {
+                        ul {
+                            li {
+                                a {
+                                    &:hover {
+                                        color: inherit;
+                                    }
+                                    &:active {
+                                        color: $yellow-primary
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 &_btn {
                     max-width: 400px;

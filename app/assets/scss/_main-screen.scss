@@ -211,61 +211,120 @@
             }
         }
     }
+
+    &_error {
+        margin-top: 20px;
+        margin-bottom: 100px;
+        padding-left: 180px;
+        padding-right: 180px;
+
+        max-width: 1010px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid $yellow-primary;
+        box-sizing: border-box;
+        border-radius: 50px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        h4 { 
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            margin-top: 15px;
+            margin-bottom: 36px;
+            text-align: center;
+            color: $yellow-primary;
+        }
+        p { 
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            margin: 0;
+
+            color: $yellow-secondary;
+        }
+        .phones { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 54px;
+            margin-top: 35px;
+            a {
+                display: block;
+                color: $yellow-primary;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                text-align: center;
+                transition: $hover;
+                &:hover, &:active { 
+                    color: $yellow-secondary;
+                }
+            }
+        }
+    }
 }
 
 
 
 @media screen and (min-width: 992px) { 
-    .main-screen_swiper-slide {
-        &_text {
-            .btn-link { 
-                a {
+    .main-screen {
+        &_swiper-slide {
+            &_text {
+                .btn-link { 
+                    a {
+                        &:hover {
+                            border-color: $yellow-primary;
+                            background-color: $yellow-primary;
+                            color: $dark21;
+                        }
+                    }
+                }
+            }
+            &_image {
+                display: block;
+            }
+        }
+        &_menu {
+            ul {
+                li {
+                    border-right: 1px solid $yellow-primary;
                     &:hover {
-                        border-color: $yellow-primary;
-                        background-color: $yellow-primary;
-                        color: $dark21;
+                        ul {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                     
+                    &:last-child { 
+                        border-right: 0; 
+                    }
+                    >div {
+                        height: 100%;
+                    }
+                    a {
+                        &:hover { 
+                            background: rgba(0, 0, 0, 0.65); 
+                        }
+                    }
+                    ul {  
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        z-index: 999;
                     }
                 }
             }
         }
-        &_image {
-            display: block;
-        }
-    }
-    .main-screen_menu {
-        ul {
-            li {
-                border-right: 1px solid $yellow-primary;
-                &:hover {
-                    ul {
-                        visibility: visible;
-                        opacity: 1;
-                    }
-                }
-                 
-                &:last-child { 
-                    border-right: 0; 
-                }
-                >div {
-                    height: 100%;
-                }
-                a {
-                    &:hover { 
-                        background: rgba(0, 0, 0, 0.65); 
-                    }
-                }
-                ul {  
-                    visibility: hidden;
-                    opacity: 0;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    right: 0;
-                    z-index: 999;
-                }
-            }
-        }
-    }
+    } 
 }
 @media screen and (max-width: 1200px) { 
     .main-screen {
@@ -405,6 +464,11 @@
                 }
             }
         }
+        
+        &_error {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
     }
 }
 
@@ -451,6 +515,16 @@
                             border-bottom: 1px solid rgba($color: $yellow-secondary, $alpha: .1)
                         }
                     }
+                }
+            }
+        }
+
+        &_error {
+            margin-top: 40px;
+            .phones { 
+                margin-bottom: 30px;
+                a {
+                    margin-top: 5px;
                 }
             }
         }

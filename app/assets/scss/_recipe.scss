@@ -263,6 +263,9 @@
 
 @media screen and (max-width: 992px) {
     .recipe { 
+        h2.heading-dark {
+            margin-top: 40px;
+        }
         &-row { 
             flex-direction: column;
             align-items: flex-start;

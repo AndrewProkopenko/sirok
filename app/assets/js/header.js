@@ -2,45 +2,51 @@
 
 const winWidth = window.innerWidth
 
-const menuItem = document.querySelectorAll('.js-menu-hover-item a') 
+const menuItem = document.querySelectorAll('.js-menu-hover-item a')  // ссылки из меню (наведение / клик) 
 const menuIcons = document.querySelectorAll('.js-menu-hover-item i') 
 const menuList = document.querySelectorAll('.js-menu-list') 
 
-const mobileClose = document.querySelector('.js-mobile-close-menu')
+const mobileClose = document.querySelector('.js-mobile-close-menu') // кнопка для закрытия меню для <576px
     
 
-const menuContainer = document.querySelector('.js-category-menu')
-const menuBtn = document.querySelector('.js-category-btn')
-const menuWrapper = document.querySelector('.js-category-wrapper')
+const menuContainer = document.querySelector('.js-category-menu') // выпадающие меню
+const menuBtn = document.querySelector('.js-category-btn') // выпадающие меню кнопка открытия 
+const menuWrapper = document.querySelector('.js-category-wrapper') // выпадающие меню фон
+ 
+const searchBtn = document.querySelectorAll('.js-search-btn')
+const searchWrapper = document.querySelector('.js-search-wrapper')
+const searchForm = document.querySelector('.js-search-form')
 
 
+const headerBtn = document.querySelector('.js-header-menu-btn') // кнопка открытия мобильного меню сбоку 
+const headerMenu = document.querySelector('.js-header-menu') 
+const headerWrapper = document.querySelector('.js-menu-wrapper')
+
+// mobile menu
+
+headerBtn.addEventListener('click', function() {
+    headerMenu.classList.add('mobile-menu-open') 
+    headerWrapper.classList.add('show') 
+    document.body.style.overflow = 'hidden'
+
+});
+mobileClose.addEventListener('click', function() {
+    headerMenu.classList.remove('mobile-menu-open') 
+    headerWrapper.classList.remove('show') 
+
+    document.body.style.overflow = ''
+
+    closeInnerMenu()
+})
+headerWrapper.addEventListener('click', function() {
+    headerMenu.classList.remove('mobile-menu-open') 
+    headerWrapper.classList.remove('show') 
+    document.body.style.overflow = ''
+
+    closeInnerMenu()
+})
+    
 // search and mobile menu 
-    const searchBtn = document.querySelectorAll('.js-search-btn')
-    const searchWrapper = document.querySelector('.js-search-wrapper')
-    const searchForm = document.querySelector('.js-search-form')
-
-
-    const headerBtn = document.querySelector('.js-header-menu-btn')
-    const headerMenu = document.querySelector('.js-header-menu')
-    const headerWrapper = document.querySelector('.js-menu-wrapper')
-
-    headerBtn.addEventListener('click', function() {
-        headerMenu.classList.add('mobile-menu-open') 
-        headerWrapper.classList.add('show') 
-
-    });
-    mobileClose.addEventListener('click', function() {
-        headerMenu.classList.remove('mobile-menu-open') 
-        headerWrapper.classList.remove('show') 
-
-        closeInnerMenu()
-    })
-    headerWrapper.addEventListener('click', function() {
-        headerMenu.classList.remove('mobile-menu-open') 
-        headerWrapper.classList.remove('show') 
-
-        closeInnerMenu()
-    })
     searchBtn.forEach(item => {
         item.addEventListener('click', function() {
             searchForm.classList.add('show') 

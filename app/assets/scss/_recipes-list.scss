@@ -142,6 +142,9 @@
     }
 }
 @media screen and (max-width: 992px) {
+    .recipes { 
+            padding-top: 40px; 
+    }
     .recipes-row_item { 
         width: calc(50% - 10px );
         &:nth-child(3n) {

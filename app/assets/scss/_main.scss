@@ -18,6 +18,9 @@ main {
 }
 
 @media screen and (max-width: 992px) { 
+    header {
+        min-height: 80px;
+    }
     .zoomed-image {
         cursor: default;
     }
