@@ -1,5 +1,8 @@
  
 .profit {
+    a {
+        display: block; 
+    }
     position: relative;
     margin-bottom: 100px;
 
@@ -71,7 +74,10 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            a { 
+            .flex-item { 
+                a {
+                    width: 100%;
+                }
                 display: inline-block;
                 margin-right: 30px;
                 margin-bottom: 30px;
@@ -121,11 +127,10 @@
                     line-height: 16px;
                     text-align: center;
 
-                    color: #000000;
-                    margin-top: 10px;
-                    margin-bottom: 25px;
-
-                    padding: 0 25px; 
+                    color: #000000; 
+                    a {
+                        padding: 10px 25px 25px 25px;
+                    }
                 }
                 .description {
                     display: none;
@@ -183,7 +188,7 @@
             }
         }
         &.items-list {
-            a { 
+            .flex-item { 
                 display: block; 
                 margin-bottom: 30px;
                 width: 100%;
@@ -254,6 +259,7 @@
                             font-size: 18px;
                             line-height: 21px;
                             transition: $hover;
+                            cursor: pointer;
                             .icon { 
                                 display: block;
                                 width: 30px;
@@ -291,9 +297,12 @@
     .profit { 
         &-blocks { 
             &.items-grid {   
-                a { 
+                justify-content: flex-start;
+                .flex-item { 
                     min-width: 200px;
+                    width: calc(25% - 20px);
                     margin-right: 20px; 
+                    margin-bottom: 20px;
                 } 
             }
         }
@@ -303,7 +312,7 @@
     .profit { 
         &-blocks { 
             &.items-grid {   
-                a {   
+                .flex-item {   
                     &:nth-child(4n) { 
                         margin-right: 0;
                     }
@@ -320,7 +329,7 @@
     .profit { 
         &-blocks {
             &.items-list { 
-                a {
+                .flex-item {
                     margin-bottom: 20px;
                 }
                 .profit-blocks_item {
@@ -345,7 +354,10 @@
                 }
             }
             &.items-grid {   
-                a {   
+                .content-text {
+                    min-height: auto !important;
+                }
+                .flex-item {   
                     margin-bottom: 20px;
                     &:nth-child(3n) { 
                         margin-right: 0;
@@ -389,7 +401,7 @@
                 }
             }
             &.items-grid {   
-                a {   
+                .flex-item {   
                     &:nth-child(2n) { 
                         margin-right: 0;
                     }
@@ -440,7 +452,7 @@
             &.items-grid {
                 // display: none;
                 justify-content: flex-start;
-                a {    
+                .flex-item {    
                     width: calc(50% - 5px);
                     margin-right: 10px;
                     margin-bottom: 10px;
@@ -463,8 +475,9 @@
                         min-height: auto;
                     }
                     .title {
-                        padding: 0 8px;
-                        margin-bottom: 10px;
+                        a { 
+                            padding: 10px 8px; 
+                        }
                     }
                     &__footer { 
                         padding: 0 8px 16px 8px;
@@ -499,8 +512,10 @@
                         height: 140px;
                     }
                     .title {
-                        padding-left: 3px;
-                        padding-right: 3px;
+                        a {
+                            padding-left: 3px;
+                            padding-right: 3px;
+                        }
                     }
                 }
                 

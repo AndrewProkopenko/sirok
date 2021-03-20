@@ -2198,6 +2198,8 @@ ul {
 .profit {
   position: relative;
   margin-bottom: 100px; }
+  .profit a {
+    display: block; }
   .profit .container {
     position: relative;
     z-index: 6; }
@@ -2285,19 +2287,21 @@ ul {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
-    .profit-blocks.items-grid a {
+    .profit-blocks.items-grid .flex-item {
       display: inline-block;
       margin-right: 30px;
       margin-bottom: 30px;
       width: calc(20% - 30px);
       min-width: 225px; }
-      .profit-blocks.items-grid a:nth-child(5n) {
+      .profit-blocks.items-grid .flex-item a {
+        width: 100%; }
+      .profit-blocks.items-grid .flex-item:nth-child(5n) {
         margin-right: 0; }
-      .profit-blocks.items-grid a:last-child {
+      .profit-blocks.items-grid .flex-item:last-child {
         margin-right: 0; }
-      .profit-blocks.items-grid a:hover {
+      .profit-blocks.items-grid .flex-item:hover {
         color: inherit !important; }
-        .profit-blocks.items-grid a:hover .profit-blocks_item {
+        .profit-blocks.items-grid .flex-item:hover .profit-blocks_item {
           -webkit-box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.2);
                   box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.2); }
     .profit-blocks.items-grid .profit-blocks_item {
@@ -2350,10 +2354,9 @@ ul {
         font-size: 14px;
         line-height: 16px;
         text-align: center;
-        color: #000000;
-        margin-top: 10px;
-        margin-bottom: 25px;
-        padding: 0 25px; }
+        color: #000000; }
+        .profit-blocks.items-grid .profit-blocks_item .title a {
+          padding: 10px 25px 25px 25px; }
       .profit-blocks.items-grid .profit-blocks_item .description {
         display: none; }
       .profit-blocks.items-grid .profit-blocks_item__footer {
@@ -2403,13 +2406,13 @@ ul {
               fill: #464646; }
           .profit-blocks.items-grid .profit-blocks_item__footer .to-cart span {
             display: none; }
-  .profit-blocks.items-list a {
+  .profit-blocks.items-list .flex-item {
     display: block;
     margin-bottom: 30px;
     width: 100%; }
-    .profit-blocks.items-list a:last-child {
+    .profit-blocks.items-list .flex-item:last-child {
       margin-bottom: 0; }
-    .profit-blocks.items-list a:hover .profit-blocks_item {
+    .profit-blocks.items-list .flex-item:hover .profit-blocks_item {
       background-color: #262626; }
   .profit-blocks.items-list .profit-blocks_item {
     background-color: #212121;
@@ -2496,7 +2499,8 @@ ul {
           line-height: 21px;
           -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
           -o-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-          transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+          transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          cursor: pointer; }
           .profit-blocks.items-list .profit-blocks_item .content-text .profit-blocks_item__footer .to-cart .icon {
             display: block;
             width: 30px;
@@ -2515,18 +2519,25 @@ ul {
               fill: #212121; }
 
 @media screen and (max-width: 1300px) {
-  .profit-blocks.items-grid a {
-    min-width: 200px;
-    margin-right: 20px; } }
+  .profit-blocks.items-grid {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .profit-blocks.items-grid .flex-item {
+      min-width: 200px;
+      width: calc(25% - 20px);
+      margin-right: 20px;
+      margin-bottom: 20px; } }
 
 @media screen and (max-width: 1180px) {
-  .profit-blocks.items-grid a:nth-child(4n) {
+  .profit-blocks.items-grid .flex-item:nth-child(4n) {
     margin-right: 0; }
-  .profit-blocks.items-grid a:nth-child(5n) {
+  .profit-blocks.items-grid .flex-item:nth-child(5n) {
     margin-right: 20px; } }
 
 @media screen and (max-width: 992px) {
-  .profit-blocks.items-list a {
+  .profit-blocks.items-list .flex-item {
     margin-bottom: 20px; }
   .profit-blocks.items-list .profit-blocks_item {
     padding: 20px 15px;
@@ -2549,11 +2560,13 @@ ul {
             -ms-flex-pack: center;
                 justify-content: center;
         margin-bottom: 0 !important; }
-  .profit-blocks.items-grid a {
+  .profit-blocks.items-grid .content-text {
+    min-height: auto !important; }
+  .profit-blocks.items-grid .flex-item {
     margin-bottom: 20px; }
-    .profit-blocks.items-grid a:nth-child(3n) {
+    .profit-blocks.items-grid .flex-item:nth-child(3n) {
       margin-right: 0; }
-    .profit-blocks.items-grid a:nth-child(4n) {
+    .profit-blocks.items-grid .flex-item:nth-child(4n) {
       margin-right: 20px; } }
 
 @media screen and (max-width: 770px) {
@@ -2591,9 +2604,9 @@ ul {
         -webkit-align-items: center;
             -ms-flex-align: center;
                 align-items: center; }
-  .profit-blocks.items-grid a:nth-child(2n) {
+  .profit-blocks.items-grid .flex-item:nth-child(2n) {
     margin-right: 0; }
-  .profit-blocks.items-grid a:nth-child(3n) {
+  .profit-blocks.items-grid .flex-item:nth-child(3n) {
     margin-right: 20px; } }
 
 @media screen and (max-width: 576px) {
@@ -2632,22 +2645,21 @@ ul {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    .profit-blocks.items-grid a {
+    .profit-blocks.items-grid .flex-item {
       width: calc(50% - 5px);
       margin-right: 10px;
       margin-bottom: 10px;
       min-width: auto; }
-      .profit-blocks.items-grid a:nth-child(2n) {
+      .profit-blocks.items-grid .flex-item:nth-child(2n) {
         margin-right: 0; }
-      .profit-blocks.items-grid a:nth-child(3n) {
+      .profit-blocks.items-grid .flex-item:nth-child(3n) {
         margin-right: 10px; }
-      .profit-blocks.items-grid a:nth-child(5n) {
+      .profit-blocks.items-grid .flex-item:nth-child(5n) {
         margin-right: 10px; }
     .profit-blocks.items-grid .profit-blocks_item .content-text {
       min-height: auto; }
-    .profit-blocks.items-grid .profit-blocks_item .title {
-      padding: 0 8px;
-      margin-bottom: 10px; }
+    .profit-blocks.items-grid .profit-blocks_item .title a {
+      padding: 10px 8px; }
     .profit-blocks.items-grid .profit-blocks_item__footer {
       padding: 0 8px 16px 8px;
       -webkit-box-orient: vertical;
@@ -2676,7 +2688,7 @@ ul {
 @media screen and (max-width: 450px) {
   .profit-blocks.items-grid .profit-blocks_item .image {
     height: 140px; }
-  .profit-blocks.items-grid .profit-blocks_item .title {
+  .profit-blocks.items-grid .profit-blocks_item .title a {
     padding-left: 3px;
     padding-right: 3px; } }
 
@@ -2758,7 +2770,7 @@ ul {
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
       margin-top: 32px; }
-      .recipe-recomended-row a {
+      .recipe-recomended-row .flex-link {
         display: -webkit-inline-box;
         display: -webkit-inline-flex;
         display: -ms-inline-flexbox;
@@ -2773,8 +2785,10 @@ ul {
             -ms-flex-align: center;
                 align-items: center;
         width: 100%; }
-        .recipe-recomended-row a:hover {
-          color: inherit !important; }
+        .recipe-recomended-row .flex-link a {
+          width: 100%; }
+          .recipe-recomended-row .flex-link a:hover {
+            color: inherit !important; }
       .recipe-recomended-row_item {
         margin-right: 30px;
         margin-bottom: 30px;
@@ -2837,10 +2851,11 @@ ul {
           font-weight: 400;
           font-size: 14px;
           line-height: 16px;
-          text-align: center;
-          margin-top: 16px;
-          margin-bottom: 15px;
-          padding: 0 25px; }
+          text-align: center; }
+          .recipe-recomended-row_item .title a {
+            width: 100%;
+            display: block;
+            padding: 16px 25px; }
         .recipe-recomended-row_item__select {
           width: 100%;
           display: -webkit-box;
@@ -2991,10 +3006,8 @@ ul {
       .recipe-recomended-row_item {
         width: calc(50% - 10px);
         min-width: auto; }
-        .recipe-recomended-row_item .title {
-          margin: 10px 0;
-          padding-left: 5px;
-          padding-right: 5px; }
+        .recipe-recomended-row_item .title a {
+          padding: 10px 5px; }
         .recipe-recomended-row_item__select {
           padding-left: 10px;
           padding-right: 10px;

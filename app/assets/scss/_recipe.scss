@@ -89,14 +89,18 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 32px; 
-            a {  
+            .flex-link {  
                 display: inline-flex;
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+                
+                a {
+                    width: 100%;
 
-                &:hover {
-                    color: inherit !important; 
+                    &:hover {
+                        color: inherit !important; 
+                    }
                 }
             }
             &_item {  
@@ -161,11 +165,12 @@
                     font-size: 14px;
                     line-height: 16px;
                     text-align: center;
-
-                    margin-top: 16px;
-                    margin-bottom: 15px;
-
-                    padding: 0 25px; 
+  
+                    a {
+                        width: 100%;
+                        display: block;
+                        padding:  16px 25px;
+                    }
                 } 
                 &__select { 
                     width: 100%;
@@ -364,9 +369,9 @@
                     width: calc(50% - 10px);
                     min-width: auto;
                     .title { 
-                        margin: 10px 0;
-                        padding-left: 5px;
-                        padding-right: 5px;
+                        a { 
+                            padding: 10px 5px; 
+                        }
                     }
                     &__select { 
                         padding-left: 10px;
