@@ -112,10 +112,7 @@
                                     color: $yellow-primary;
                                 }
                             }
-                        }
-                        .rating {
-
-                        }
+                        } 
                     }
                     .price { 
                         padding: 10px 35px;
@@ -137,6 +134,9 @@
                         &:hover { 
                             background-color: $hover-dark-btn;
 
+                        }
+                        &:active { 
+                            background-color: $dark21 ; 
                         }
                     }
                 }
@@ -177,20 +177,10 @@
     }
 }
 
-
-@media screen and (max-width: 1200px) {
-    .product {
-        .white-bg-block { 
-            // bottom: 80px;
-        }
-    }
-}
+ 
 @media screen and (max-width: 992px) {
      .product { 
-         padding-top: 40px;
-        .white-bg-block { 
-            // bottom: -600px;
-        }
+         padding-top: 40px; 
         h3 {
             text-align: center;
         }

@@ -190,8 +190,37 @@
         background-color: lighten($color: $dark21, $amount: 2);    
     }
 }
-@media screen and (max-width: 1280px) {
-     
+@media screen and (max-width: 1200px) {
+    .catalog-row {
+        &_sidebar {
+            min-width: 250px;
+            &__menu ul li {
+                ul {
+                    li a {
+                        padding-left: 40px;
+                        padding-right: 24px;    
+                    }
+                }
+                &.title {
+                    padding-left: 25px;
+                }
+                a {
+                    padding-left: 25px;
+                }
+            }
+        }
+        &_main {
+            width: 100%;
+            &__item {
+                width: 199px;
+                margin-right: 20px;
+                .recipe-recomended-row_item {
+                    min-width: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 1024px) {
     .tss-label { 
@@ -274,7 +303,7 @@
                 position: absolute;
                 display: none;
                 top: 20px;
-                left: 320px;
+                left: 280px;
                 width: 50px;
                 height: 50px; 
                 overflow: hidden;
@@ -342,7 +371,7 @@
                     h3 { 
                         width: 100%;
                     }
-                }
+                } 
                 &_main {
                     .info { 
                         text-align: center;
@@ -357,13 +386,36 @@
                     min-width: 260px;
                 }
                 &_main { 
-                    justify-content: center;
+                    // justify-content: center;
+                    &__item {
+                        width: calc(50% - 10px);
+                        margin-right: 20px;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
                 }
             }
         }  
         .mobile-menu-wrap span {
             left: 268px; 
         }
+    } 
+    
+}
+@media screen and (max-width: 450px) {
+    .catalog { 
+        .catalog-content{ 
+            .catalog-row { 
+                
+                &_main {  
+                    &__item {
+                        width: calc(50% - 5px);
+                        margin-right: 10px; 
+                    }
+                }
+            }
+        }   
     } 
     
 }

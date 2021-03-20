@@ -7,11 +7,11 @@ const itemsContainer = document.querySelector('.js-list-container')
 
 grid.addEventListener('click', () => {
     itemsContainer.classList.remove('items-list')
-    itemsContainer.classList.add('items-row')
+    itemsContainer.classList.add('items-grid')
     bg.classList.add('d-none')
 })
 list.addEventListener('click', () => {
     itemsContainer.classList.add('items-list')
-    itemsContainer.classList.remove('items-row')
+    itemsContainer.classList.remove('items-grid')
     bg.classList.remove('d-none')
 })

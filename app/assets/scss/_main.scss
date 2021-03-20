@@ -177,8 +177,12 @@ main {
         border-radius: 5px;
         cursor: pointer;
         transition: $hover;
+        user-select: none;
         &:hover { 
             background-color: $hover-dark-btn;
+        }
+        &:active { 
+            background-color: $dark21 ; 
         }
     }
     input { 

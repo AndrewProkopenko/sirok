@@ -190,6 +190,7 @@
                     padding: 30px;
                     flex-direction: column;
                     align-items: center;
+                    border-radius: 25px;
                     .content  {
                         margin-left: 0;
                         margin-top: 20px;
@@ -227,24 +228,36 @@
                     flex-direction: column;
                     align-items: center;
                     margin-bottom: 20px;
+                    
+                    .image {
+                        min-width: 175px;
+                        height: 170px;
+                    }
+
                     .content  {
                         margin-left: 0;
-                        margin-top: 20px;
+                        margin-top: 15px;
                         align-items: center;
                         text-align: center;
                         h5 { 
                             font-size: 22px;
                             line-height: 26px;
-                            margin-bottom: 16px;
+                            margin-bottom: 15px;
                         }
                         .select { 
                             margin-bottom: 16px;
                         }
                         .price { 
                             flex-direction: column;
+                            width: 100%;
+                            max-width: 400px;
+                            margin-bottom: 10px;
                             span { 
                                 margin-right: 0;
                                 margin-bottom: 4px;
+                            }
+                            p {
+                                width: 100%;
                             }
                         }
                     }

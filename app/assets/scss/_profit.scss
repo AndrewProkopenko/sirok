@@ -67,7 +67,7 @@
         }
     }
     &-blocks { 
-        &.items-row {
+        &.items-grid {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -156,6 +156,14 @@
                         transition: $hover;
                         &:hover {  
                             background-color: $hover-light-btn;
+                        }
+                        &:active {  
+                            background-color: #464646;
+                            .icon  {
+                                svg {
+                                    fill: #fff;
+                                }
+                            }
                         }
                         .icon { 
                             display: block;
@@ -260,6 +268,15 @@
                             &:hover { 
                                 background-color: fade-out($color: $yellow-secondary, $amount: 0.95);
                             }
+                            &:active { 
+                                background-color: $yellow-secondary;
+                                color: $dark21;
+                                i.icon {
+                                    svg {
+                                        fill: $dark21;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -273,7 +290,7 @@
 @media screen and (max-width: 1300px) {
     .profit { 
         &-blocks { 
-            &.items-row {   
+            &.items-grid {   
                 a { 
                     min-width: 200px;
                     margin-right: 20px; 
@@ -285,7 +302,7 @@
 @media screen and (max-width: 1180px) {
     .profit { 
         &-blocks { 
-            &.items-row {   
+            &.items-grid {   
                 a {   
                     &:nth-child(4n) { 
                         margin-right: 0;
@@ -303,8 +320,12 @@
     .profit { 
         &-blocks {
             &.items-list { 
+                a {
+                    margin-bottom: 20px;
+                }
                 .profit-blocks_item {
                     padding: 20px 15px;
+                    border-radius: 25px;
                     align-items: center;
                     .content-text { 
                         padding-left: 15px;
@@ -312,10 +333,20 @@
                             margin-bottom: 16px;
                         }
                     }
+                    &__footer {  
+                        width: 100%;
+                        .to-cart { 
+                            width: 100%;
+                            max-width: 400px;
+                            justify-content: center;
+                            margin-bottom: 0 !important;
+                        }
+                    }
                 }
             }
-            &.items-row {   
+            &.items-grid {   
                 a {   
+                    margin-bottom: 20px;
                     &:nth-child(3n) { 
                         margin-right: 0;
                     }
@@ -357,7 +388,7 @@
                     }
                 }
             }
-            &.items-row {   
+            &.items-grid {   
                 a {   
                     &:nth-child(2n) { 
                         margin-right: 0;
@@ -406,6 +437,55 @@
                     }
                 }
             }
+            &.items-grid {
+                // display: none;
+                justify-content: flex-start;
+                a {    
+                    width: calc(50% - 5px);
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    &:nth-child(2n) { 
+                        margin-right: 0;
+                    }
+                    &:nth-child(3n) { 
+                        margin-right: 10px;
+                    }
+                    &:nth-child(5n) { 
+                        margin-right: 10px;
+                    }
+                    // margin-left: 10px;  
+                    // margin-right: 10px !important;  
+                    min-width: auto;
+                } 
+                
+                .profit-blocks_item  {
+                    .content-text {
+                        min-height: auto;
+                    }
+                    .title {
+                        padding: 0 8px;
+                        margin-bottom: 10px;
+                    }
+                    &__footer { 
+                        padding: 0 8px 16px 8px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        .price { 
+                            margin-right: 0;
+                            margin-bottom: 10px;
+                        }
+                        .to-cart { 
+                            width: 100%;
+                            border: 1px solid #464646;
+                            i {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                         }
+                    }
+                }
+            }
         }
     }
 }
@@ -413,11 +493,17 @@
 @media screen and (max-width: 450px) {
     .profit { 
         &-blocks { 
-            &.items-row {   
-                a {    
-                    margin-left: 10px;  
-                    margin-right: 10px !important;  
-                } 
+            &.items-grid {   
+                .profit-blocks_item {
+                    .image {
+                        height: 140px;
+                    }
+                    .title {
+                        padding-left: 3px;
+                        padding-right: 3px;
+                    }
+                }
+                
             }
         }
     }
