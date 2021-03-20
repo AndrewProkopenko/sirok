@@ -217,6 +217,9 @@
                 .recipe-recomended-row_item {
                     min-width: auto;
                     width: 100%;
+                    &.small-item { 
+                        min-width: auto;
+                    }
                 }
             }
         }
