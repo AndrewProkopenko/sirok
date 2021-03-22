@@ -34,8 +34,8 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: top left;
-        width: 298px;
-        height: 899px;
+        width: 250px;
+        height: 830px;
     }
     &_right-bg {
         position: absolute;
@@ -45,7 +45,7 @@
         background-image: url(../img/backgrounds/main-right.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: top right;
+        background-position: bottom right;
         width: 298px;
         height: 899px;
     }
@@ -64,7 +64,7 @@
         z-index: 20;
         color: $yellow-primary;
 
-        margin-top: 30px;
+        margin-top: 80px;
          
         .swiper-wrapper {
             margin-bottom: 32px;
@@ -153,13 +153,18 @@
 
     &_menu {
         position: relative;
-        z-index: 20;
-        margin-top: auto;
-        margin-bottom: 100px;
+        z-index: 21;
+        margin-top: 15px;
+        // margin-bottom: 100px;
+        .container {
+            padding: 0;
+            max-width: 1360px;
+        } 
+         
         ul {
             display: flex;
             li {    
-                position: relative;
+                position: relative; 
                 width: 100%;
                 flex-grow: 1; 
                 height: 70px;
@@ -180,7 +185,7 @@
                     transition: $hover background;
                     
                     &:active { 
-                        background: rgba(0, 0, 0, 0.65); 
+                        background: #0C0C0C; 
                     }
 
                 }
@@ -189,11 +194,11 @@
                 }
 
                 ul {  
+                    position: relative; 
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                     
-                    background: $dark21;
                     transition: 300ms ease;
                     li { 
                         
@@ -202,6 +207,7 @@
                         height: auto;
                         a {  
                             padding: 16px 0;
+                            background: #262626; 
                         }
                         border-right: 0;
                         border-bottom: 1px solid $yellow-primary;
@@ -274,26 +280,28 @@
 
 @media screen and (min-width: 992px) { 
     .main-screen {
-        &_swiper-slide {
-            &_text {
-                .btn-link { 
-                    a {
-                        &:hover {
-                            border-color: $yellow-primary;
-                            background-color: $yellow-primary;
-                            color: $dark21;
+        &_swiper {
+            &-slide {
+                &_text {
+                    .btn-link { 
+                        a {
+                            &:hover {
+                                border-color: $yellow-primary;
+                                background-color: $yellow-primary;
+                                color: $dark21;
+                            }
                         }
                     }
                 }
-            }
-            &_image {
-                display: block;
+                &_image {
+                    display: block;
+                }
             }
         }
         &_menu {
             ul {
                 li {
-                    border-right: 1px solid $yellow-primary;
+                    border-right: 1px solid $yellow-secondary;
                     &:hover {
                         ul {
                             visibility: visible;
@@ -309,7 +317,7 @@
                     }
                     a {
                         &:hover { 
-                            background: rgba(0, 0, 0, 0.65); 
+                            background: #0C0C0C; 
                         }
                     }
                     ul {  
@@ -325,6 +333,11 @@
             }
         }
     } 
+}
+@media screen and (max-width: 1300px) {
+    .main-screen_menu ul li {
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 1200px) { 
     .main-screen {
@@ -368,6 +381,8 @@
 @media screen and (max-width: 992px) {  
     .main-screen {
         min-height: auto;
+        padding-bottom: 120px;
+
         &_left-bg, &_right-bg  {
             width: 100px;
             height: 300px;
@@ -377,6 +392,8 @@
             line-height: 21px;
         }
         &_swiper {
+            margin-top: 40px;
+            margin-bottom: 0;
             .swiper-wrapper {
                 margin-bottom: 50px;
             }
@@ -396,6 +413,7 @@
             }
         }
         &_menu { 
+            display: none;
             margin-top: 40px;
             ul { 
                 flex-direction: column; 

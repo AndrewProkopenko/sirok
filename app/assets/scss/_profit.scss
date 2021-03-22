@@ -159,6 +159,7 @@
                         border-radius: 4px; 
                         cursor: pointer;
                         transition: $hover;
+                        user-select: none;
                         &:hover {  
                             background-color: $hover-light-btn;
                         }
@@ -260,6 +261,7 @@
                             line-height: 21px;
                             transition: $hover;
                             cursor: pointer;
+                            user-select: none;
                             .icon { 
                                 display: block;
                                 width: 30px;
