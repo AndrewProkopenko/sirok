@@ -404,6 +404,9 @@
         &-item { 
             max-width: 200px;
             padding-right: 30px;
+            &.once-item {
+                max-width: none;
+            }
         }
     }
 

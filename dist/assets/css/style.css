@@ -914,6 +914,8 @@ ul {
     .header-row_menu__drop-down_menu .drop-menu_list-item {
       max-width: 200px;
       padding-right: 30px; }
+      .header-row_menu__drop-down_menu .drop-menu_list-item.once-item {
+        max-width: none; }
 
 @media screen and (max-width: 1300px) {
   .header-row_menu__drop-down_menu {
@@ -1838,7 +1840,7 @@ ul {
             border-right: 0;
             border-bottom: 1px solid #FDAD00; }
             .main-screen_menu ul li ul li a {
-              padding: 16px 0;
+              padding: 16px 2px;
               background: #262626; }
   .main-screen_error {
     margin-top: 20px;
@@ -1939,7 +1941,10 @@ ul {
 
 @media screen and (max-width: 1300px) {
   .main-screen_menu ul li {
-    font-size: 20px; } }
+    font-size: 20px; }
+    .main-screen_menu ul li ul li {
+      font-size: 16px;
+      line-height: 18px; } }
 
 @media screen and (max-width: 1200px) {
   .main-screen_left-bg, .main-screen_right-bg {
