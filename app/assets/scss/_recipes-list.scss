@@ -9,8 +9,8 @@
     h3 { 
 
         font-weight: 500;
-        font-size: 36px;
-        line-height: 42px;
+        // font-size: 36px;
+        // line-height: 42px;
         color: $yellow-primary;
         padding: 11px 54px;
         margin-bottom: 32px;
@@ -91,15 +91,15 @@
                         color: #fff;
                         .title { 
                             font-weight: bold;
-                            font-size: 36px;
-                            line-height: 42px;
+                            font-size: 30px;
+                            line-height: 34px;
                             margin-bottom: 3px;
                         }
                         .description {
                             margin: 3px 0 6px 0;
                             font-weight: normal;
-                            font-size: 18px;
-                            line-height: 21px;
+                            font-size: 16px;
+                            line-height: 18px;
                             max-width: 75%;
                         }
                         .button {
@@ -109,7 +109,7 @@
                             border-radius: 15px;
                             font-weight: 500;
                             font-size: 18px;
-                            line-height: 21px;
+                            line-height: 22px;
                             padding: 8px 27px;
                             transition: $hover;
                         }
@@ -163,11 +163,11 @@
         min-height: 220px;
         a .item .content {
             .title { 
-                font-size: 25px;
-                line-height: 28px;
+                font-size: 22px;
+                line-height: 24px;
             }
             .description { 
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 18px;
             }
             .button { 
@@ -187,7 +187,7 @@
         &-row { 
             &_item {   
                 width: 100%;
-                max-width: 407px;
+                max-width: 407px; 
                 margin-left: auto;
                 margin-right: auto !important;
                 margin-bottom: 10px;
@@ -206,5 +206,15 @@
             background-image: url(../img/backgrounds/yellow-line-576.svg);
             bottom: -20px;
         }
+    }
+}
+@media screen and (max-width: 400px) {
+    .recipes {
+        
+        &-row { 
+            &_item {   
+                min-height: 160px; 
+            }
+        }  
     }
 }

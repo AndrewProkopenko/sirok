@@ -226,13 +226,13 @@
                     padding-left: 30px;
                     .title {
                         font-weight: 500;
-                        font-size: 24px;
-                        line-height: 28px;
+                        font-size: 20px;
+                        line-height: 24px;
                         margin-bottom: 16px;
                     }
                     .description { 
-                        font-size: 18px;
-                        line-height: 21px;
+                        font-size: 16px;
+                        line-height: 18px;
                         margin-bottom: 30px;
                     }
                     .profit-blocks_item__footer {
@@ -244,8 +244,8 @@
                             padding: 10px 35px;     
                             margin-bottom: 16px;
                             font-weight: 300;
-                            font-size: 20px;
-                            line-height: 23px;
+                            font-size: 18px;
+                            line-height: 22px;
                             border: 1px solid $yellow-secondary; 
                             border-radius: 10px;
                         }
@@ -258,7 +258,7 @@
                             border-radius: 10px;
                             font-weight: 300;
                             font-size: 18px;
-                            line-height: 21px;
+                            line-height: 22px;
                             transition: $hover;
                             cursor: pointer;
                             user-select: none;
@@ -416,7 +416,7 @@
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) { 
     .profit {
         h3 { 
             text-align: center;
@@ -429,6 +429,14 @@
                 .item { 
                     margin-right: 0;
                     margin-bottom: 10px;
+                    .select-text {
+                        .selectr-selected {
+                            min-width: 150px;
+                        }
+                    }
+                    label  {
+                        font-size: 14px;
+                    }
                     &:last-child {
                         margin-right: 0;
                         margin-bottom: 0;
@@ -441,12 +449,12 @@
                 .profit-blocks_item { 
                     .content-text {  
                         .description { 
-                            font-size: 16px;
-                            line-height: 18px;
+                            font-size: 14px;
+                            line-height: 16px;
                         } 
                         .title { 
-                            font-size: 20px;
-                            line-height: 22px;
+                            font-size: 16px;
+                            line-height: 20px;
                         } 
                     }
                 }

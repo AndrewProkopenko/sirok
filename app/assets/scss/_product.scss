@@ -93,8 +93,8 @@
                     &.info {
                         p { 
                             font-weight: 300;
-                            font-size: 18px;
-                            line-height: 21px;
+                            font-size: 16px;
+                            line-height: 18px;
                             margin-bottom: 15px;
                             span {
                                 font-weight: 500;
@@ -104,8 +104,8 @@
                             margin-top: 20px;
                             margin-bottom: 20px;
                             font-weight: 300;
-                            font-size: 18px;
-                            line-height: 21px;
+                            font-size: 16px;
+                            line-height: 18px;
                             a { 
                                 transition: $hover;
                                 &:hover { 
@@ -150,15 +150,15 @@
                 }
                 p { 
                     font-weight: normal;
-                    font-size: 24px;
-                    line-height: 28px;
-                    margin-bottom: 0;
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-bottom: 5px;
                 }
                 h5 { 
 
                     font-weight: 500;
-                    font-size: 24px;
-                    line-height: 28px;
+                    font-size: 20px;
+                    line-height: 24px;
                     margin-bottom: 20px;
                     margin-top: 10px;
                 }
@@ -167,9 +167,9 @@
                     margin-bottom: 20px;
                     li {
 
-                        font-size: 18px;
-                        line-height: 21px;
-                        margin-bottom: 15px;
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin-bottom: 12px;
                     }
                 }
             }
@@ -232,6 +232,7 @@
 
 @media screen and (max-width: 576px) {
     .product { 
+        margin-bottom: 30px;
         .white-bg-block { 
             bottom: -40px;
         }
@@ -259,6 +260,22 @@
                     h4, h5, p {
                         text-align: center;
                     }
+                    p {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    ul {
+                        margin: 10px 0;
+                        li {
+                            margin-bottom: 8px; 
+                        }
+                    }
+                    h5 {
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin-bottom: 15px;
+                    }
+                    
                 }
             }
         }

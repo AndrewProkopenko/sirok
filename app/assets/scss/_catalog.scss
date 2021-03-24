@@ -171,8 +171,8 @@
     &-paragraph-blocks {
         margin: 85px 0;
         font-weight: normal;
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 18px;
+        line-height: 22px;
         
         color: #000000;
         p {
@@ -235,9 +235,9 @@
         align-items: center;
         margin: 20px 0;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 26px;
-        padding: 14px 30px;  
+        padding: 12px 30px;  
         background-color: $dark22;
         color: $yellow-primary;
         border-radius: 10px;
@@ -361,8 +361,8 @@
 @media screen and (max-width: 576px) {
     .catalog {
         &-paragraph-blocks {
-            font-size: 16px;
-            line-height: 20px;
+            font-size: 14px;
+            line-height: 18px;
             margin: 30px 0;
         }
         .catalog-header {
@@ -373,11 +373,21 @@
                     width: 100%;
                     h3 { 
                         width: 100%;
+                        font-size: 22px;
+                        line-height: 26px;
+                        min-height: auto;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
                     }
                 } 
                 &_main {
                     .info { 
                         text-align: center;
+                        font-size: 16px;
+                        line-height: 20px;
+                        br {
+                            display: none;
+                        }
                     }
                     justify-content: center;
                 }

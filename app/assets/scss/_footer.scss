@@ -39,6 +39,7 @@
                 line-height: 28px;
                 margin-top: 0;
                 margin-bottom: 15px;
+                cursor: default;
             }
             &_list {
                 li {
@@ -47,6 +48,7 @@
                     line-height: 19px;
 
                     margin-bottom: 10px;
+                    cursor: default;
                     &:last-child {
                         margin-bottom: 0;
                     }
@@ -117,6 +119,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
+                
             }
         }
     }
@@ -125,7 +128,16 @@
 @media screen and (max-width: 576px) {
     .footer { 
         &-row { 
-            padding-top: 100px; 
+            padding-top: 80px; 
+            &-item {
+                h5 {
+                    font-size: 22px;
+                }
+                ul li {
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+            }
         }
     }
 }

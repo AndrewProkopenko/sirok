@@ -35,8 +35,8 @@
         }
         &_text { 
             font-weight: 500;
-            font-size: 18px;
-            line-height: 21px;
+            font-size: 16px;
+            line-height: 20px;
             color: #000;
             p { 
                 margin-bottom: 15px;
@@ -44,14 +44,18 @@
         }
     }
     &-step { 
-        margin-top: 32px;
+        margin-top: 30px;
         &_heading {  
             color: #464646 !important;
             font-weight: 900;
+            font-size: 24px;
+            line-height: 26px;
+            margin-bottom: 0;
         }
         &_paragraph { 
-            margin-top: 35px;
-            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 16px;
             line-height: 21px;
             
             color: #000000;
@@ -59,11 +63,12 @@
         }
     }
     &-download { 
-        margin-top: 32px;
-        margin-bottom: 32px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         
         transition: $hover; 
-        &:hover { 
+        
+        &:active { 
             background-color: $hover-btn;
             a {
                 color: $dark21;
@@ -75,8 +80,8 @@
             padding: 16px 30px;
             
             font-weight: 500;
-            font-size: 24px;
-            line-height: 28px;
+            font-size: 22px;
+            line-height: 24px;
         }
     }
     &-recomended {
@@ -243,6 +248,14 @@
     }
 }
  
+@media screen and (min-width: 992px) {
+    .recipe-download:hover { 
+        background-color: $hover-btn;
+        a {
+            color: $dark21;
+        } 
+    }
+}
 @media screen and (max-width: 1300px) {
     .recipe { 
         &-recomended { 
@@ -336,6 +349,7 @@
         margin-bottom: -60px;
         h2 {
             width: 100%;
+
         }
         h3 { 
             text-align: center;
@@ -348,10 +362,19 @@
                 min-width: auto;
                 height: 200px;
             }
+            &_text {
+                font-size: 14px;
+                line-height: 18px;
+            }
         }
         &-step {
+            &_heading {
+                font-size: 18px;
+            }
             &_paragraph { 
                 margin-top: 5px;
+                font-size: 14px;
+                line-height: 18px;
             }
         }
 
@@ -361,6 +384,13 @@
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
+            a {
+                font-size: 18px;
+                line-height: 20px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+            
         }
 
         &-recomended { 

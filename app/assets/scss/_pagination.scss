@@ -30,9 +30,8 @@ $margin-em: 15px;
             width: 100%;
             height: 100%;
         }
-        &:hover { 
-            background-color: $hover-dark-btn;  
-            transform: scale(1.5);
+        &:active {  
+            transform: scale(0.9);
             transform-origin: center; 
             a { 
                 color: inherit;
@@ -61,10 +60,18 @@ $margin-em: 15px;
                 height: 45px;
                 font-size: 24px;
                 line-height: 28px; 
+                cursor: default; 
                 &:hover {   
                     transform: none;
                     cursor: default; 
                     background-color: $dark22; 
+                }
+                &:active {  
+                    transform: scale(1);
+                    transform-origin: center; 
+                    a { 
+                        color: inherit;
+                    } 
                 }
             }
         }
@@ -74,6 +81,23 @@ $margin-em: 15px;
     } 
     .to-end {}
 }
+
+@media screen and (min-width: 992px) {
+    .pagination { 
+        &_item { 
+             
+            &:hover { 
+                background-color: $hover-dark-btn;  
+                transform: scale(1.5);
+                transform-origin: center; 
+                a { 
+                    color: inherit;
+                } 
+            } 
+        }
+    }
+} 
+
 
 @media screen and (max-width: 770px) { 
     .pagination_item { 
