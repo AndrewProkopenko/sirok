@@ -47,7 +47,7 @@ gulp.task('userjs', function() {
          
         .pipe(concat('script.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(babel())
-        // .pipe(uglify()) // Сжимаем JS файл
+        .pipe(uglify()) // Сжимаем JS файл
         .pipe(gulp.dest('app/assets/js')); // Выгружаем в папку app/js
 });
  
@@ -116,6 +116,6 @@ gulp.task('copyBuild', function() {
         .pipe(gulp.dest('build')); // Выгружаем в папку  
 });
 
-gulp.task('default', gulp.parallel('sass', 'scripts',  'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('sass', 'scripts', "userjs", 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass'));
 gulp.task('git', gulp.parallel('cleanBuild', 'copyBuild' ));
