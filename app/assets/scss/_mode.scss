@@ -1,0 +1,118 @@
+.header-line .logo h1 {
+    margin-bottom: 0;
+}
+.header-line .logo {
+    position: relative;
+    height: 100%;
+}
+.header-line .logo img { 
+
+    width: 70px;
+    height: 70px;
+
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+
+    /* height: 40px; */
+}
+
+.header-row_cart .button-badge {
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: rgb(172, 41, 1);
+    outline: 0;
+    border: 0;
+    color: #fff;
+} 
+ .header-row_cart .button-badge i.fa {
+    display: none; 
+}
+
+ .header-row_search .show .input-button {
+    display: flex;
+    position: fixed;
+    z-index: 1501;
+    top: 35%;
+    left: calc(50% - 200px);
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+    visibility: visible;
+    -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    max-width: 400px;
+}
+.search-wrap {
+    z-index: 100 !important;
+    top: 100% !important;
+    height: 100vh;
+    position: absolute !important;
+}
+ 
+
+.header-row_menu__drop-down_btn.open::after {
+    content: attr(data-back-text) !important;
+}
+
+.header-row_lang .btn { 
+    width: 100%;
+    outline: none;
+
+    background: none;
+    padding: 5px;
+    border: 1px solid #FDAD00;
+    border-radius: 5px;
+    color: #FDAD00;
+    background-color: #212121;
+}
+
+.header-row_lang .dropdown-menu {
+    display: none;
+}
+.header-row_lang  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+}
+.header-row_lang .open .dropdown-menu {
+    display: block;
+    width: 100%;
+}
+ 
+
+
+@media screen and (max-width: 992px) {
+    .header-line .logo img {
+        width: 60px;
+        height: 60px;
+        bottom: -30px;
+    }
+    .header .mobile-header .mobile-search {
+        display: none;
+    }
+    .header .mobile-menu .header-row_search {
+        display: block !important;
+        margin-right: 0px ;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    .header .mobile-menu .header-row_search .input-button {
+        transform: translateX(0);
+        display: block !important;
+    }
+    .header .mobile-menu .header-row_search .mobile-search {
+        display: none;
+    }
+}

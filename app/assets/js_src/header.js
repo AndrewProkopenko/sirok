@@ -49,10 +49,10 @@
         
     // search and mobile menu 
         searchBtn.forEach(item => {
-            item.addEventListener('click', function() {
-                searchForm.classList.add('show') 
-                searchWrapper.classList.add('show')
-            document.body.style.overflow = 'hidden'
+            item.addEventListener('click', function() { 
+                searchForm.classList.toggle('show') 
+                searchWrapper.classList.toggle('show')
+                document.body.style.overflow == 'hidden' ? document.body.style.overflow = '' : document.body.style.overflow = 'hidden'
             });
         })
         searchWrapper.addEventListener('click', function() {

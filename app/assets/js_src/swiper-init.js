@@ -3,7 +3,7 @@
 
 ;(function(){
     
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-main-screen', {
         spaceBetween: 30,  
         pagination: {
             el: '.swiper-pagination',
